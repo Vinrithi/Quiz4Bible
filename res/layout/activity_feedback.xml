@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@drawable/main_menu_bg6"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll">
+            <include layout="@layout/toolbar_with_image"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll"
+            android:layout_above="@+id/llButtonsSection">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We highly value and appreciate feedback and recommendations sent by our users. Please send us one today."
+                    android:textColor="#022344"
+                    android:textSize="16sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
+                    android:background="@drawable/feedback_edittext"
+                    android:textSize="17sp"
+                    android:id="@+id/etFeedback"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#00b050"
+                    android:gravity="start|left"
+                    android:padding="15dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@id/llButtonsSection">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Send"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btSend"
+                android:background="@drawable/buttons_bg2"
+                android:textColor="#022344"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Side navigation drawer UI -->
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:paddingRight="1.5dp"
+        android:paddingEnd="1.5dp">
+        <include layout="@layout/navigation_slider"/>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

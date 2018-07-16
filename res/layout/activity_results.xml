@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_menu_bg5" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/toolbar_with_image" />
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/spRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll2" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llButtonsSection"
+            android:layout_below="@id/ll">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Book"
+                                android:textColor="#022344"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text=" : "
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvBook"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/results_edittext_bg"
+                                android:gravity="center"
+                                android:text="Genesis"
+                                android:textColor="#022344"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Level"
+                                android:textColor="#022344"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text=" : "
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvLevel"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/results_edittext_bg"
+                                android:gravity="center"
+                                android:text="Medium"
+                                android:textColor="#022344"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Questions"
+                                android:textColor="#022344"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text=" : "
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvAllQuestions"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/results_edittext_bg"
+                                android:gravity="center"
+                                android:text="30"
+                                android:textColor="#022344"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Correct"
+                                android:textColor="#00b050"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text=" : "
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvCorrect"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/results_edittext_bg"
+                                android:gravity="center"
+                                android:text="10"
+                                android:textColor="#00b050"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Incorrect"
+                                android:textColor="#f00"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text=" : "
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvIncorrect"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/results_edittext_bg"
+                                android:gravity="center"
+                                android:text="30"
+                                android:textColor="#f00"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Score"
+                                android:textColor="#022344"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text=" : "
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvScore"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/results_edittext_bg"
+                                android:gravity="center"
+                                android:text="30%"
+                                android:textColor="#022344"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="Nice try. Please revisit your study of the book of Genesis"
+                    android:textColor="#d76b00"
+                    android:textSize="16sp"
+                    android:background="#fff"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@id/llButtonsSection"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="#fff">
+
+            <Button
+                android:id="@+id/btAnswers"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/buttons_bg2"
+                android:text="Answers"
+                android:textAllCaps="false"
+                android:textColor="#2e4066"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/btFinish"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/buttons_bg2"
+                android:text="Finish"
+                android:textAllCaps="false"
+                android:textColor="#2e4066"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

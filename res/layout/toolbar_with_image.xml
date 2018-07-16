@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/include_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolbarColor"
+    android:visibility="visible"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    app:theme="@style/AppTheme.AppBarOverlay"
+    app:titleTextColor="#ffffff"
+    android:gravity="end|right">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:src="@drawable/white_quiz_logo"/>
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/tvToolbarTitle"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:textColor="#fff"
+        android:gravity="center_vertical"
+        android:textSize="18dp"
+        />
+
+</android.support.v7.widget.Toolbar>

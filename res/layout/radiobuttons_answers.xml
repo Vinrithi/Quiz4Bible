@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/rdGroup">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Genesis"
+                android:id="@+id/rdAns1"
+                android:paddingLeft="20dp"
+                android:textSize="17sp"
+                android:textColor="#2e4066"
+                android:layout_marginBottom="2dp"
+                app:buttonTint="#b82e4066"/>
+
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Exodus"
+                android:textSize="17sp"
+                android:id="@+id/rdAns2"
+                android:paddingLeft="20dp"
+                android:textColor="#2e4066"
+                android:layout_marginBottom="2dp"
+                app:buttonTint="#b82e4066"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Leviticus"
+                android:textSize="17sp"
+                android:id="@+id/rdAns3"
+                android:paddingLeft="20dp"
+                android:textColor="#2e4066"
+                android:layout_marginBottom="2dp"
+                app:buttonTint="#b82e4066"/>
+
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Numbers"
+                android:textSize="17sp"
+                android:id="@+id/rdAns4"
+                android:paddingLeft="20dp"
+                android:textColor="#2e4066"
+                app:buttonTint="#b82e4066"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Deuteronomy"
+                android:textSize="17sp"
+                android:id="@+id/rdAns5"
+                android:paddingLeft="20dp"
+                android:textColor="#2e4066"
+                android:layout_marginBottom="12dp"
+                app:buttonTint="#b82e4066"/>
+
+    </RadioGroup>
+</LinearLayout>

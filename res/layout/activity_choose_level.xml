@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_menu_bg6"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll">
+            <include layout="@layout/toolbar_with_image"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll"
+            android:id="@+id/ll2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/toolbarColor">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70dp"
+                android:gravity="center"
+                android:text="You have only 30 seconds to answer a question.  You can only pause the quiz once. Good luck"
+                android:textSize="15sp"
+                android:id="@+id/tvBook"
+                android:textColor="#00B050"
+                android:textStyle="italic"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="2dp"/>
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:maxHeight="330dp"
+            android:layout_below="@id/ll2"
+            android:id="@+id/scrollView"
+            android:layout_above="@+id/llButtonsSection">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="50dp"
+                android:paddingStart="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please choose the: "
+                    android:textColor="#022344"
+                    android:gravity="center_vertical"
+                    android:textSize="17sp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quiz Level "
+                    android:textColor="#00B050"
+                    android:gravity="center_vertical"
+                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/rdGroup"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp">
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Easy"
+                        android:textSize="17sp"
+                        android:id="@+id/rdEasy"
+                        android:checked="true"
+                        android:paddingLeft="20dp"
+                        app:buttonTint="#022344"
+                        android:textColor="#022344"
+                        android:layout_marginBottom="10dp"/>
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textSize="17sp"
+                        android:id="@+id/rdMedium"
+                        android:paddingLeft="20dp"
+                        app:buttonTint="#022344"
+                        android:textColor="#022344"
+                        
+                        android:layout_marginBottom="10dp"/>
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hard"
+                        android:textSize="17sp"
+                        android:id="@+id/rdHard"
+                        android:paddingLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        app:buttonTint="#022344"
+                        android:textColor="#022344"/>
+                </RadioGroup>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Number Of Questions "
+                    android:gravity="center_vertical"
+                    android:textSize="17sp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#00B050"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(Minimum:15 Maximum:30)"
+                    android:gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#00B050"/>
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="17sp"
+                    android:id="@+id/etNumberofQuestions"
+                    android:textColor="#022344"
+                    android:background="@drawable/questions_edittext"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:id="@id/llButtonsSection">
+            
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:text="Start"
+                    android:textAllCaps="false"
+                    android:textSize="17sp"
+                    android:textColor="#2e4066"
+                    android:background="@drawable/buttons_bg2"
+                    android:gravity="center"
+                    android:id="@+id/btStart"
+                   />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

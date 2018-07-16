@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_menu_bg5" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/toolbar_with_image" />
+        </LinearLayout>
+        
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="You have not taken any test. Thus, no analysis is available."
+                    android:layout_margin="30dp"
+                    android:textColor="#000"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:id="@+id/tvNoAnalysis"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llAnalysis"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of Tests: "
+                            android:textColor="#022344"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25"
+                            android:textColor="#022344"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#000"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Level Analysis"
+                        android:textColor="#022344"
+                        android:textSize="16sp"
+                        android:layout_marginTop="14dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Easy"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="13/25"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Medium"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="10/25"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hard"
+                            android:textColor="#000"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="3/25"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Highest number of questions: "
+                            android:textColor="#022344"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25"
+                            android:textColor="#022344"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Favorite book: "
+                            android:textColor="#022344"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deuteronomy"
+                            android:textColor="#022344"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Test time"
+                        android:textColor="#022344"
+                        android:textSize="16sp"
+                        android:layout_marginTop="14dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Longest time"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="13/25"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Shortest time"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="10/25"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3999f9">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll">
+            <include layout="@layout/toolbar_layout"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll"
+            android:id="@+id/ll2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/cloudy_top_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Short analysis of your tests"
+                android:textColor="#d76b00"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="You have not taken any test. Thus, no analysis is available."
+                    android:layout_margin="30dp"
+                    android:textColor="#fff"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:id="@+id/tvNoAnalysis"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llAnalysis"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Most common testament"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+                            android:layout_marginTop="14dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Old Testament"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="You have taken tests from 13/25 books which are in OT"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:layout_marginTop="7dp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#fff"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#fff"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Most common testament"
+                            android:textColor="#d76b00"
+                            android:textSize="20sp"
+                            android:layout_marginTop="14dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Old Testament"
+                            android:textColor="#00B050"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="You have taken tests from 13/25 books which are in OT"
+                            android:textColor="#131423"
+                            android:textSize="18sp"
+                            android:layout_marginTop="7dp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#fff"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Most common testament"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+                            android:layout_marginTop="14dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Old Testament"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="You have taken tests from 13/25 books which are in OT"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:layout_marginTop="7dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

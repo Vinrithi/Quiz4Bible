@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:text="1"
+        android:minWidth="40dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/tvNo"
+        android:textColor="#022344"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="100"
+        android:minWidth="40dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/tvScore"
+        android:textColor="#022344"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Medium"
+        android:minWidth="90dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/tvLevel"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:textColor="#022344"/>
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="Deuteronomy"
+        android:minWidth="110dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:id="@+id/tvBook"
+        android:textColor="#022344"/>
+
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/purple_more_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/imgIndicator"/>
+
+</LinearLayout>
